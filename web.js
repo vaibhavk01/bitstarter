@@ -11,7 +11,9 @@ fs.readFile('index.html', 'utf8', function (err,data) {
 
 
 app.get('/', function(request, response) {
-  response.send('vaibhav'+data);
+   response.writeHeader(200, {"Content-Type": "text/html"});  
+        response.write(data);  
+        response.end();
 });
 
 var port = process.env.PORT || 5000;
