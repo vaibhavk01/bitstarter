@@ -11,7 +11,7 @@ fs.readFile('index.html', 'utf8', function (err,data) {
 
 
 app.get('/', function(request, response) {
-  response.send('vaibhav'+data);
+  response.send('vaibhav');
 });
 
 var port = process.env.PORT || 5000;
