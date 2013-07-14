@@ -1,17 +1,11 @@
 var express = require('express');
 
 var app = express.createServer(express.logger());
-var fs = require('fs')
-fs.readFile('./index.html', 'utf8', function (err,data) {
-  if (err) {
-    return console.log(err);
-  }
-  
-});
-
 
 app.get('/', function(request, response) {
-  response.send('vaibhav'+data);
+    var fs = require('fs');
+    var buffer = new buffer();
+    response.send(buffer.toString('utc-8', fs.readFileSync("index.html")));
 });
 
 var port = process.env.PORT || 5000;
